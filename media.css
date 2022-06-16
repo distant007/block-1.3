@@ -1,0 +1,106 @@
+@media(min-width: 321px){ 
+  .services__img{
+    padding-left: 16px;
+  }
+  .header__burger{
+    margin-right: 40px;
+  }
+  .header__burger::before{
+    content: url(../img/divider.svg);
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+  }
+}
+@media(min-width: 769px){
+  .services__block{
+    flex-direction: row;
+  }
+  .services__image{
+    padding-top: 24px;
+  }
+  .services__info p:nth-of-type(2){
+    display: block;
+  }
+  .header__buttons-contacts{
+    visibility: visible;
+  }
+  .services__img{
+    width: 360px;
+    height: 208px;
+  }
+  .services__text{
+    line-height: 20px;
+  }
+  .header__con{
+    padding: 19px 16px 19px 24px;
+  }
+  .services__image{
+    padding-right: 25px;
+  }
+  .services__text{
+    max-height: 160px;
+  }
+  .services__text p{
+    line-height: 20px;
+  }
+}
+@media (min-width:1120px) {
+  .services__title {
+    padding-left: 32px;
+  }
+  .services__buttons {
+    padding-left: 34px;
+  }
+  .services__info{
+    padding-left: 34px;
+  }
+  .services__img{
+    width: 531px;
+    height: 307px;
+  }
+  .header{
+    display: none;
+  }
+  h1{
+    padding-top: 0;
+  }
+  .header__status{
+    margin-left: 160px;
+  }
+  .services__head{
+    display: flex;
+    align-items: center;
+    padding-top: 42px;
+  }
+  .services__buttons-options{
+    visibility: visible;
+  }
+  .services__buttons-options > .header__status::before{
+    content: "Статус ремонта";
+    position: absolute;
+    left: -110px;
+    bottom: 20%;
+    font-family: 'TT Lakes Condensed Medium';
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+  }
+  .services__buttons-options > .header__option::before{
+    content: "Оставить заявку";
+    position: absolute;
+    left: -115px;
+    bottom: 20%;
+    font-family: 'TT Lakes Condensed Medium';
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+  }
+  .services__span{
+    display: inline;
+  }
+}
