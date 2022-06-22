@@ -26,3 +26,6 @@ button{
   background-color: transparent;
   white-space: nowrap;
 }
+a{
+  text-decoration: none;
+}

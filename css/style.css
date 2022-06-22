@@ -25,7 +25,10 @@
     font-weight: normal;
     font-style: normal;
     }
-
+.container{
+  max-width: 320px;
+  margin: 0 auto;
+}
 .header__con{
   padding: 19px 16px 19px 16px;
   background-color: #FFFFFF;
@@ -44,23 +47,23 @@
   margin-right: 16px;
 }
 .header__logo{
-  margin-right: 16px;
+  background-image: url(../img/group.svg);
+  width: 97px;
+  height: 51px;
+  background-repeat: no-repeat;
 }
 .header__option{
   background-image: url(../img/ic/repair.svg);
   background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: right;
   width: 40px;
   height: 40px;
-  border: none;
   padding: 0;
   position: relative;
   margin-left: 20px;
-}
-.header__option::before{
-  content: url(../img/divider.svg);
-  position: absolute;
-  left: -20px;
-  bottom: 0;
+  border-left: 2px solid #EAEAEA;
+  padding-left: 20px;
 }
 .header__status{
   background-image: url(../img/ic/checkstatus.svg);
@@ -118,8 +121,6 @@
 .services__buttons-options{
   display: flex;
   align-items: center;
-  position: absolute;
-  right: 16px;
   visibility: hidden;
 }
 .services__buttons{
@@ -139,6 +140,7 @@
   letter-spacing: -0.2px;
   color: #7E7E82;
   transition: all .3s ease ;
+  text-decoration: none;
 }
 .services__btn + .services__btn{
   margin-left: 10px;
