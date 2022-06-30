@@ -113,10 +113,30 @@
   padding-left: 16px;
   position: relative;
 }
+.services__buttons::-webkit-scrollbar {
+    width: 0;
+}
 .services__title::before{
   content: url(../img/highlight.svg);
   position: absolute;
   left: 0px;
+}
+.services__option{
+  padding-right: 20px;
+}
+.services__option,
+.services__status{
+  display: flex;
+  align-items: center;
+  font-family: 'TT Lakes Condensed Medium';
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+  letter-spacing: -0.2px;
+  color: #1B1C21;
+}
+.services__span{
+  padding-right: 10px;
 }
 .services__buttons-options{
   display: flex;
@@ -170,12 +190,12 @@
   flex-direction: column;
   align-items: flex-start;
 }
+.services__info{
+  padding: 0px 16px 0px 16px;
+}
 .services__img{
   width: 320px; 
   height: 176px;
-}
-.services__info{
-  padding: 24px 16px 0px 16px;
 }
 .services__span{
   display: none;
