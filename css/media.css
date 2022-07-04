@@ -2,20 +2,20 @@
   .services__img{
     padding-top: 24px;
   }
-  .header__burger{
-    background-repeat: no-repeat;
-    background-position: left;
-    border-right: 2px solid #EAEAEA;
-    padding-right: 20px;
-  }
   .container{
   max-width: 769px;
   }
   .header__option{
     border: none;
   }
+  .header__option::before {
+    visibility: hidden;
+  }
 }
 @media(min-width: 769px){
+  .header__option::before {
+    visibility: visible;
+  }
   .services__block{
     flex-direction: row;
   }
@@ -44,11 +44,8 @@
   .container{
   max-width: 1120px;
   }
-  .header__option{
-    border-left: 2px solid #EAEAEA;
-  }
   .services__block{
-    padding: 24px 24px 0px 18px;
+    padding: 0px 24px 0px 16px;
   }
   .services__info{
     padding-left: 0;
@@ -56,16 +53,33 @@
   .services__img{
     padding-top: 0;
   }
+  .header__logo{
+    margin-left: 20px;
+  }
+  .header__burger::after{
+    content: "";
+    width: 2px;
+    height: 32px;
+    position: absolute;
+    left: 55px;
+    bottom: 5px;
+    background-color: #EAEAEA;
+  }
 }
 @media (min-width:1120px) {
+  .services__hidden{
+    display: inline;
+  }
   .services__title {
     padding-left: 32px;
   }
   .services__buttons {
     padding-left: 34px;
+    overflow: visible;
   }
-  .services__info{
-    padding-left: 34px;
+  .services__buttons ul{
+    flex-wrap: wrap;
+    gap: 15px 0px;
   }
   .services__img{
     width: 531px;
@@ -87,7 +101,8 @@
     justify-content: space-between;
   }
   .services__buttons-options{
-    visibility: visible;
+    display: flex;
+    gap: 20px;
   }
   .services__buttons-options > .header__status::before{
     content: "Статус ремонта";
@@ -119,5 +134,8 @@
   .header__option{
     border: none;
     padding-left: 0;
+  }
+  .services__block{
+    padding: 0px 24px 0px 32px;
   }
 }

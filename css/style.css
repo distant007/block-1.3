@@ -36,13 +36,17 @@
   align-items: center;
   position: relative;;
 }
+.background{
+  background-color: #FF3E79;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  background-position: center;
+}
 .header__burger{
   position: relative;
   background-image: url(../img/ic/burger.svg);
-  background-color: transparent;
   width: 40px;
   height: 40px;
-  border: none;
   padding: 0;
   margin-right: 16px;
 }
@@ -54,32 +58,32 @@
 }
 .header__option{
   background-image: url(../img/ic/repair.svg);
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: right;
   width: 40px;
   height: 40px;
   padding: 0;
   position: relative;
   margin-left: 20px;
-  border-left: 2px solid #EAEAEA;
-  padding-left: 20px;
+}
+.header__option::before{
+    content: "";
+    width: 2px;
+    height: 32px;
+    position: absolute;
+    left: -20px;
+    bottom: 5px;
+    background-color: #EAEAEA;
 }
 .header__status{
   background-image: url(../img/ic/checkstatus.svg);
-  background-color: transparent;
   width: 40px;
   height: 40px;
-  border: none;
-  padding: 0;
-  margin-left: 16px;
-  position: relative;;
 }
 .header__buttons-options{
   display: flex;
   align-items: center;
   position: absolute;
   right: 16px;
+  gap: 16px;
 }
 .header__buttons-contacts{
   display: flex;
@@ -116,13 +120,17 @@
 .services__buttons::-webkit-scrollbar {
     width: 0;
 }
+.services__hidden{
+  display: none;
+}
 .services__title::before{
-  content: url(../img/highlight.svg);
+  content: "";
   position: absolute;
   left: 0px;
-}
-.services__option{
-  padding-right: 20px;
+  width: 3px;
+  height: 42px;
+  background: rgba(65, 246, 215, 1);
+  border-radius: 2px;
 }
 .services__option,
 .services__status{
@@ -134,14 +142,24 @@
   text-align: right;
   letter-spacing: -0.2px;
   color: #1B1C21;
+  gap: 10px;
 }
-.services__span{
-  padding-right: 10px;
+.services__option-img{
+  background-image: url(../img/ic/repair.svg);
+  width: 40px;
+  height: 40px;
+}
+.services__status-img{
+  background-image: url(../img/ic/checkstatus.svg);
+  width: 40px;
+  height: 40px;
 }
 .services__buttons-options{
-  display: flex;
+  display: none;
   align-items: center;
-  visibility: hidden;
+}
+.services__buttons ul{
+  display: flex;
 }
 .services__buttons{
   padding-top: 24px;
@@ -217,6 +235,9 @@
   left: 5px;
 }
 .services__text{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   max-height: 90px;
   overflow: hidden;
   margin-bottom: 16px;
