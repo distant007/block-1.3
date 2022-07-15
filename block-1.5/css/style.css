@@ -71,10 +71,7 @@ ul{
 }
 .swiper-wrapper{
   margin-left: 16px;
-}
-.padding{
-  margin: 0;
-  padding: 16px;
+  padding-top: 16px;
 }
 .slider__title{
   text-transform: uppercase;
@@ -83,8 +80,10 @@ ul{
   line-height: 24px;
   color: #7E7E82;
   background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
+  margin: 0;
+  padding: 16px;
 }
-.slider__button{
+.slider__link{
   width: 206px;
   height: 38px;
   padding: 16px;
@@ -95,15 +94,13 @@ ul{
   border-radius: 6px;
   background-color: #FFFFFF;
 }
-.position{
-  margin-top: 16px;
-}
 .slider__img-arrow{
-  width: 8px;
-  height: 12px;
   padding: 14px 15px 14px 17px;
   border: 2px solid #FF3E79;
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
 }
 .swiper-pagination{
   margin-bottom: 28px;
@@ -112,33 +109,15 @@ ul{
   width: 12px;
   height: 12px;
   background-color: #DDDDDD;
+  opacity: 1;
 }
 .slider .swiper-pagination-bullet-active{
   background-color: #B5B6BC;
 }
-
-.brands{
-  margin: 0 auto;
-  width: 768px;
-  padding-left: 16px;
-  padding-top: 40px;
-  display: none;
+.swiper-wrapper .swiper-slide{
+  flex-shrink: 1;
 }
-.brands__buttons{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px 24px;
-  margin-bottom: 24px;
-  overflow: hidden;
-}
-.height{
-  height: 160px;
-}
-.height-more{
-  height: 100%;
-}
-.brands__button-show,
-.brands__button-hidden{
+.slider__button{
   font-family: 'TT Lakes Condensed Medium';
   font-size: 16px;
   line-height: 24px;
@@ -147,45 +126,53 @@ ul{
   padding-left: 25px;
   position: relative;
 }
-.brands__button-show::before{
+.slider__button::before{
   content: url(../img/ic/icon.svg);
   position: absolute;
   left: 2px;
 }
-.brands__button-hidden::before{
+.hidden::before{
   content: url(../img/ic/icon.svg);
   position: absolute;
   left: 2px;
   transform: rotate(180deg);
 }
-.hidden{
-  display: none;
+.container{
+  margin: 0 auto;
 }
-.show{
-  display: inline;
+.opened{
+    height: 250px !important;
 }
-
-
 @media (min-width: 767px){
-  .brands{
-    display: block;
+  .swiper{
+    height: 100%;
   }
-  .slider{
-    display: none;
+  .swiper .swiper-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0;
+    gap: 16px;
+    padding-bottom: 24px;
+    height: 150px;
+    overflow-y: hidden;
+    transition: height 0.3s linear;
   }
-  .slider__button{
+  .slider__link{
     width: 190px;
     height: 38px;
   }
+  .container{
+    width: 767px;
+  }
 }
 @media (min-width: 1120px){
-  .brands{
+  .container{
     width: 1120px;
   }
-  .brands__buttons{
+  .swiper .swiper-wrapper{
     grid-template-columns: repeat(4, 1fr);
   }
-  .slider__button{
+  .slider__link{
     width: 206px;
     height: 38px;
   }

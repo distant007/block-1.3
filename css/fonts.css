@@ -1,0 +1,37 @@
+body{
+  font-family: 'TT Lakes Condensed Regular';
+  background-color: #F8F8F8;
+  margin: 0;
+}
+h1{
+ font-family: 'TT Lakes Condensed Bold';;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+  color: #1B1C21;
+  margin: 0;
+  padding-top: 24px;
+}
+p{
+  font-family: 'TT Lakes Condensed Regular';
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #1B1C21;
+  margin: 0;
+}
+button{
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  white-space: nowrap;
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+ul{
+  padding: 0;
+}
