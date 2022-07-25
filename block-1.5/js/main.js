@@ -30,8 +30,8 @@ let open = document.querySelector('.slider__button');
 
 open.addEventListener('click', ()=>{
   open.classList.toggle('hidden')
-  swiperWrapper.classList.toggle('opened')
-  open.textContent = !swiperWrapper.classList.contains('opened') ? 'Показать все' : 'Скрыть'
+  swiperWrapper.classList.toggle('swiper--opened')
+  open.textContent = !swiperWrapper.classList.contains('swiper--opened') ? 'Показать все' : 'Скрыть'
 })
 
 
