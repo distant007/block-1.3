@@ -39,6 +39,12 @@ h1{
   margin: 0;
   padding-top: 24px;
 }
+h2,
+h3,
+h4,
+h5{
+    margin: 0;
+}
 p{
   font-family: 'TT Lakes Condensed Regular';
   font-size: 14px;
@@ -70,7 +76,6 @@ ul{
 }
 .swiper-wrapper{
   margin-left: 16px;
-  padding-top: 16px;
 }
 .slider__title{
   text-transform: uppercase;
@@ -79,8 +84,9 @@ ul{
   line-height: 24px;
   color: #7E7E82;
   background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
-  margin: 0;
-  padding: 16px;
+}
+.position{
+    padding: 16px;
 }
 .slider__link{
     width: 240px;
@@ -95,12 +101,13 @@ ul{
   background-color: #FFFFFF;
 }
 .slider__img-arrow{
-  padding: 14px 15px 14px 17px;
   border: 2px solid #FF3E79;
-  border-radius: 20px;
+  border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
   display: flex;
-  justify-content: center;
-  align-content: flex-start;
 }
 .swiper-pagination{
   margin-bottom: 28px;
@@ -138,28 +145,40 @@ ul{
   transform: rotate(180deg);
 }
 .container{
-  margin: 0 auto;
+    margin: 0 auto;
 }
-.opened{
-    height: 250px !important;
-}
+
 @media (min-width: 767px){
   .swiper{
     height: 100%;
-    padding: 0 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin: 0;
   }
-  .swiper .swiper-wrapper{
+.swiper-wrapper{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 0;
     gap: 16px 23px;
-    padding-bottom: 24px;
-    height: 150px;
+    height: 160px;
     overflow-y: hidden;
     transition: height 0.3s linear;
   }
+ .opened{
+    height: 250px;
+  }
+.swiper-pagination{
+  display: none;
+}
   .container{
     width: 767px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
   }
     .slider__link{
         width: 100%;
@@ -174,7 +193,7 @@ ul{
   }
   .swiper .swiper-wrapper{
     grid-template-columns: repeat(4, 1fr);
-      gap: 16px 32px;
+    gap: 16px 32px;
   }
 
 }

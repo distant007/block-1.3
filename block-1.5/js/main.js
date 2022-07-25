@@ -1,6 +1,9 @@
-window.onload = () => {
-  if (window.matchMedia('(max-width: 767px)').matches) {
-    const swiper = new Swiper('.swiper', {
+
+const slider = document.querySelector('.slider')
+  let swiper
+function mobileSlider() {
+    if (window.innerWidth === 320) {
+       swiper = new Swiper('.swiper', {
       direction: 'horizontal',
       loop: true,
       spaceBetween: 20,
@@ -11,16 +14,24 @@ window.onload = () => {
       },
       init: true
     })
-  }
+    }
+    if (window.innerWidth > 320 && slider.classList.contains("swiper-initialized")) {
+        swiper.destroy();
+    }
 }
-let swiper = document.querySelector('.swiper-wrapper');
+mobileSlider();
+window.addEventListener("resize", () => {
+ mobileSlider();
+});
+
+let swiperWrapper = document.querySelector('.swiper-wrapper');
 let open = document.querySelector('.slider__button');
 
 
 open.addEventListener('click', ()=>{
   open.classList.toggle('hidden')
-  swiper.classList.toggle('opened')
-  open.textContent = !swiper.classList.contains('opened') ? 'Показать все' : 'Скрыть'
+  swiperWrapper.classList.toggle('opened')
+  open.textContent = !swiperWrapper.classList.contains('opened') ? 'Показать все' : 'Скрыть'
 })
 
 
