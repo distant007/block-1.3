@@ -85,7 +85,7 @@ ul{
   color: #7E7E82;
   background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
 }
-.position{
+.slider__title--position{
     padding: 16px;
 }
 .slider__link{
