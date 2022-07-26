@@ -183,7 +183,7 @@ ul{
     .slider__link{
         width: 100%;
     }
-    .slider__title{
+    .slider__title--position{
         padding-left: 24px
     }
 }
